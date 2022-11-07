@@ -8,6 +8,7 @@
         align-items: center;
 
         background-color: transparent;
+        color: black;
 
         padding: 0rem;
         border: 0rem;
@@ -16,6 +17,14 @@
             margin: 0rem;
             width: max-content;
             height: max-content;
+        }
+    }
+}
+
+.App.dark {
+    #header {
+        #theme-toggle {
+            color: white;
         }
     }
 }
