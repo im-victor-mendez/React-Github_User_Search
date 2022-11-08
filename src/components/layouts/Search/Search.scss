@@ -1,2 +1,27 @@
 #search {
+    display: flex;
+    flex-direction: column;
+
+    svg {
+        position: relative;
+        z-index: 1;
+    }
+
+    input {
+        position: relative;
+        z-index: 0;
+
+        height: 38px;
+
+        text-indent: 16px;
+    }
+
+    #input-inside {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        position: relative;
+        top: -38px;
+    }
 }
