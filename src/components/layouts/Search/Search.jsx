@@ -1,8 +1,12 @@
 import './Search.scss'
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
+import { getGitHubUser } from "../../../utils/gitHubAPI";
+import { useDispatch } from "react-redux";
+import { setUser } from '../../../stateManagement/userSlice';
 
 function Search() {
+    const dispatch = useDispatch()
     const [input, setInput] = useState()
 
     return (
@@ -12,6 +16,14 @@ function Search() {
                 (event) => {
                     event.preventDefault()
                     console.log(input)
+                    getGitHubUser(input)
+                    .then(
+                        data => {
+                            dispatch(
+                                setUser(data)
+                            )
+                        }
+                    )
                 }
             }
             >
