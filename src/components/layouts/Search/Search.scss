@@ -2,18 +2,27 @@
     display: flex;
     flex-direction: column;
 
+    padding: 0.5rem 0.5rem;
+    height: 3.4rem;
+
     svg {
         position: relative;
         z-index: 1;
+
+        left: 2px;
     }
 
     input {
         position: relative;
         z-index: 1;
+        top: 0.5rem;
 
         height: 38px;
 
-        text-indent: 16px;
+        text-indent: 24px;
+
+        background-color: transparent;
+        border: 0rem;
     }
 
     button {
@@ -27,6 +36,6 @@
         align-items: center;
         
         position: relative;
-        top: -38px;
+        top: -23px;
     }
 }
