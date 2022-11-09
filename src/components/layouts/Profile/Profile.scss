@@ -1,0 +1,42 @@
+#profile {
+    //background-color: #1F2A48;
+
+    padding: 2rem;
+
+    #top {
+        display: flex;
+        gap: 1.5rem;
+
+        img {
+            width: 20%;
+            height: 100%;
+
+            border-radius: 100%;
+        }
+
+        #username {
+            color: #0d6efd;
+        }
+    }
+
+    #social {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 2rem;
+
+        //background-color: #141C2F;
+
+        text-align: center;
+
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+    }
+
+    #contact {
+        .contact {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+    }
+}

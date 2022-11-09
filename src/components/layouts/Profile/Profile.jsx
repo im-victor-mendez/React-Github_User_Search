@@ -1,3 +1,4 @@
+import './Profile.scss'
 import React from 'react'
 import { useSelector } from "react-redux";
 
@@ -11,8 +12,8 @@ function Profile() {
 
                 <div id='top-text'>
                     <h1 id='name'>{user.name ?? 'Not indicated'}</h1>
-                    <h2 id='username'>{user.login ?? 'Not indicated'}</h2>
-                    <p id='joined'>Joined {(user.created_at).substring(0, 10) ?? 'Not indicated'}</p>
+                    <h2 id='username'>@{user.login ?? 'Not indicated'}</h2>
+                    <p id='joined'>Joined {user.created_at ? (user.created_at).substring(0, 10) : 'Not indicated'}</p>
                 </div>
             </section>
 
@@ -54,6 +55,7 @@ function Profile() {
                 </div>
 
                 <div id='tweeter' className={`contact ${user.tweeter_username ?? 'not-available'}`}>
+                    {/* To add Twitter icon */}
                     <h1>{user.tweeter_username ?? 'Not Available'}</h1>
                 </div>
 
