@@ -1,0 +1,7 @@
+@media (min-width: 1000px) {
+    .App #profile #bio,
+    .App #profile #social,
+    .App #profile #contact {
+        margin-left: calc(20% + 1rem);
+    }
+}
