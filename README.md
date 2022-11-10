@@ -15,15 +15,9 @@
 ### Screenshot
 
 #### Desktop
-<<<<<<< HEAD
 ![](src/media/Overview%20Desktop.jpeg)
 #### Mobile
 ![](src/media/Overview%20Mobile.jpeg)
-=======
-![]()
-#### Mobile
-![]()
->>>>>>> 2cd83f51f3d588cbf5c0a06f3ec0758ff5159950
 
 ### Links
 
