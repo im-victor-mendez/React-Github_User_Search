@@ -1,7 +1,7 @@
 import './Profile.scss'
 import React from 'react'
 import { useSelector } from "react-redux";
-import { companyIcon, linkIcon, locationIcon } from '../../../media/icons/ContactIcons';
+import { companyIcon, linkIcon, locationIcon, twitterIcon } from '../../../media/icons/ContactIcons';
 
 function Profile() {
     const user = useSelector(state => state.user)
@@ -10,6 +10,13 @@ function Profile() {
         return (
             <article id='profile' className='board'>
                 <h1 className='error'>Not found D:</h1>
+            </article>
+        )
+
+    if (user.name == 'Search a GitHub username! :D')
+        return (
+            <article id='profile' className='board'>
+                <h1 id='init'>Search a GitHub username! :D</h1>
             </article>
         )
 
@@ -59,7 +66,7 @@ function Profile() {
         {
             id: 'twitter',
             /* To add Twitter icon */
-            icon: undefined,
+            icon: twitterIcon,
             value: user.tweeter_username
         },
         {
@@ -81,12 +88,9 @@ function Profile() {
                 </div>
             </section>
 
-            {
-                !user.bio ? null :
-                <article id='bio'>
-                    {user.bio ?? 'This profile has no bio'}
-                </article>
-            }
+            <article id='bio'>
+                {user.bio ?? 'This profile has no bio'}
+            </article>
 
             {
                 !user.public_repos &&
