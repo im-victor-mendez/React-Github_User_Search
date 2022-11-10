@@ -18,7 +18,7 @@ function Profile() {
             </section>
 
             <article id='bio'>
-                {user.bio ?? 'Not indicated'}
+                {user.bio ?? 'This profile has no bio'}
             </article>
 
             <section id='social'>
