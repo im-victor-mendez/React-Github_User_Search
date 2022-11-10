@@ -6,6 +6,13 @@ import { companyIcon, linkIcon, locationIcon } from '../../../media/icons/Contac
 function Profile() {
     const user = useSelector(state => state.user)
 
+    if (user.message)
+        return (
+            <article id='profile' className='board'>
+                <h1 className='error'>Not found D:</h1>
+            </article>
+        )
+
     const createdAtDate = user.created_at ? (user.created_at).split('-') : {}
     
     /**
@@ -69,27 +76,40 @@ function Profile() {
 
                 <div id='top-text'>
                     <h1 id='name'>{user.name ?? 'Not indicated'}</h1>
-                    <a id='username' href={user.html_url} target="_blank" rel="noopener noreferrer">@{user.login}</a>
+                    <a id='username' href={user.html_url} target="_blank" rel="noopener noreferrer">{user.login ? `@${user.login}` : ''}</a>
                     <p id='joined'>{joinedDate}</p>
                 </div>
             </section>
 
-            <article id='bio'>
-                {user.bio ?? 'This profile has no bio'}
-            </article>
+            {
+                !user.bio ? null :
+                <article id='bio'>
+                    {user.bio ?? 'This profile has no bio'}
+                </article>
+            }
 
-            <section id='social'>
-                {
-                    social.map(
-                        (div, key) => <div key={`social-key-${key}`} className='social'>
-                            <h1>{div.title}</h1>
-                            <h2>{div.value}</h2>
-                        </div>
-                    )
-                }
-            </section>
+            {
+                !user.public_repos &&
+                !user.followers &&
+                !user.following ? null :
+                <section id='social'>
+                    {
+                        social.map(
+                            (div, key) => <div key={`social-key-${key}`} className='social'>
+                                <h1>{div.title}</h1>
+                                <h2>{div.value}</h2>
+                            </div>
+                        )
+                    }
+                </section>
+            }
 
-            <section id='contact'>
+            {
+                !user.location &&
+                !user.html_url &&
+                !user.tweeter_username &&
+                !user.company ? null :
+                <section id='contact'>
                 {
                     contact.map(
                         (div, key) => <div id={div.id} key={`contact-key-${key}`} className={`contact ${!div.value ? 'not-available' : ''}`}>
@@ -98,7 +118,8 @@ function Profile() {
                         </div>
                     )
                 }
-            </section>
+                </section>
+            }
         </article>
     )
 }

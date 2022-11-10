@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {}
+const initialState = {
+    name: 'Search a GitHub username! :D'
+}
 
 const userSlice = createSlice(
     {
