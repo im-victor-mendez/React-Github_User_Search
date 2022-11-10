@@ -1,6 +1,16 @@
 @import url(styles/medias/Tablet.scss);
 @import url(styles/medias/Desktop.scss);
 
+#root {
+    height: 100vh;
+
+    background-color: #F5F8FF;
+}
+
+#root.dark {
+    background-color: rgb(20, 28, 47);
+}
+
 .App {
     background-color: #F5F8FF;
     color: black;
@@ -18,6 +28,7 @@
     gap: 2rem;
 
     padding: 3rem 2rem 5rem;
+    height: auto;
 
     #search {
         input {

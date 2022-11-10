@@ -9,6 +9,7 @@ function Header() {
     function toggleTheme() {
         setTheme(!theme)
         document.getElementById('App').classList.toggle('dark')
+        document.getElementById('root').classList.toggle('dark')
     }
 
     const title = 'devfinder'
