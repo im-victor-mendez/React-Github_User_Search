@@ -9,4 +9,8 @@
         display: grid;
         grid-template-columns: auto auto;
     }
+
+    .App #profile #top img {
+        width: 20%;
+    }
 }
