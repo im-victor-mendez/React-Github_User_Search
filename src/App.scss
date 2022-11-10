@@ -2,7 +2,7 @@
 @import url(styles/medias/Desktop.scss);
 
 #root {
-    height: calc(100vh + 100%);
+    height: 100vh;
 
     background-color: #F5F8FF;
 }
@@ -29,6 +29,7 @@
 
     padding: 3rem 2rem 5rem;
     height: auto;
+    width: 100vw;
 
     #search {
         input {
