@@ -2,7 +2,7 @@
 @import url(styles/medias/Desktop.scss);
 
 #root {
-    height: 100vh;
+    height: calc(100vh + 100%);
 
     background-color: #F5F8FF;
 }
