@@ -65,7 +65,6 @@ function Profile() {
         },
         {
             id: 'twitter',
-            /* To add Twitter icon */
             icon: twitterIcon,
             value: user.tweeter_username
         },
