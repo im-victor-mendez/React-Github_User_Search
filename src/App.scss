@@ -19,6 +19,14 @@
 
     padding: 3rem 2rem 5rem;
 
+    #search {
+        input {
+            &:focus-visible {
+                outline: none;
+            }
+        }
+    }
+
     #profile {
         #social {
             background-color: #F5F8FF;
@@ -38,10 +46,6 @@
     #search {
         input {
             color: white;
-
-            &:focus-visible {
-                outline: none;
-            }
         }
     }
 
