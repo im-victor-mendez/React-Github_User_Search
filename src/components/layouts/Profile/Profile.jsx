@@ -9,7 +9,7 @@ function Profile() {
     if (user.message)
         return (
             <article id='profile' className='board'>
-                <h1 className='error'>Not found D:</h1>
+                <h1 className='error text-danger'>Not found D:</h1>
             </article>
         )
 
