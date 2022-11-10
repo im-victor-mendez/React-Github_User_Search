@@ -4,4 +4,14 @@
     .App #profile #contact {
         margin-left: calc(20% + 1rem);
     }
+
+    #root {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .App {
+        width: 70%;
+    }
 }
